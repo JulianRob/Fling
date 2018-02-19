@@ -563,7 +563,7 @@ MonoBehaviour:
     width: 588
     height: 409
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_ScrollPosition: {x: 0, y: 736.0036}
+  m_ScrollPosition: {x: 0, y: 618.348}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 159
