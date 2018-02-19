@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\Ball.cs" />
      <Compile Include="Assets\Scripts\Peg.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\RopeController.cs" />
      <Compile Include="Assets\Scripts\ScrollingBackground.cs" />
      <Compile Include="Assets\Scripts\ScrollingCharacter.cs" />
  <Reference Include="UnityEngine.UI">
