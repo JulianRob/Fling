@@ -7,6 +7,10 @@ public class Ball : MonoBehaviour {
 	public Rigidbody2D rb;
 	public Rigidbody2D hook;
 
+	private int pegRate = 60;
+
+	public GameObject peg;
+
 	public float releaseTime = 0.15f;
 	public float maxDragDistance = 2f;
 
@@ -52,5 +56,18 @@ public class Ball : MonoBehaviour {
 		GetComponent<SpringJoint2D> ().enabled = false;
 		this.enabled = false;
 		stop = true;
+	}
+
+	void FixedUpdate()
+	{
+		if (pegRate >= 60) 
+		{
+			Instantiate (peg, new Vector3 (Random.Range (-2f, 2f), 6f, 0f), peg.transform.rotation);
+			pegRate = 0;
+		} 
+		else 
+		{
+			pegRate += 1;
+		}
 	}
 }
