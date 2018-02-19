@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 63895367}
   - component: {fileID: 63895366}
   - component: {fileID: 63895370}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,6 +227,8 @@ GameObject:
   - component: {fileID: 226997252}
   - component: {fileID: 226997251}
   - component: {fileID: 226997253}
+  - component: {fileID: 226997254}
+  - component: {fileID: 226997255}
   m_Layer: 8
   m_Name: Ball
   m_TagString: Ball
@@ -320,7 +322,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 226997245}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.57, z: -1}
+  m_LocalPosition: {x: 0, y: -2.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -469,6 +471,39 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!232 &226997254
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 226997245}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 1
+  m_ConnectedRigidBody: {fileID: 1726087720}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 1
+  m_Distance: 2.9842417
+  m_MaxDistanceOnly: 1
+--- !u!114 &226997255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 226997245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c680f6a4f70ed412fa7024eb82f9c1fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 50
+  mask:
+    serializedVersion: 2
+    m_Bits: 4294966985
 --- !u!1 &242258644
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,7 +595,7 @@ GameObject:
   - component: {fileID: 264773601}
   - component: {fileID: 264773600}
   - component: {fileID: 264773599}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Hook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -745,11 +780,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4663372514639800, guid: 1fa61abd3a3874c23b3de1e84e01374f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.55
+      value: -1.76
       objectReference: {fileID: 0}
     - target: {fileID: 4663372514639800, guid: 1fa61abd3a3874c23b3de1e84e01374f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.84
+      value: -0.16
       objectReference: {fileID: 0}
     - target: {fileID: 4663372514639800, guid: 1fa61abd3a3874c23b3de1e84e01374f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -778,6 +813,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fa61abd3a3874c23b3de1e84e01374f, type: 2}
   m_IsPrefabParent: 0
+--- !u!50 &1726087720 stripped
+Rigidbody2D:
+  m_PrefabParentObject: {fileID: 50223079391589566, guid: 1fa61abd3a3874c23b3de1e84e01374f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1707488623}
 --- !u!1 &1808995633
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,7 +834,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!120 &1808995634
 LineRenderer:
   m_ObjectHideFlags: 0
