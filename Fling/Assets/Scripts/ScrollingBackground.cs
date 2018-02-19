@@ -18,7 +18,7 @@ public class ScrollingBackground : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		Vector2 offset = new Vector2 (Time.time*speed,0);
+		Vector2 offset = new Vector2 (0,Time.time*speed);
 		mr2d.material.mainTextureOffset = offset;
 	}
 }

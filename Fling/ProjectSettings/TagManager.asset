@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ghost0
+  - Ghost1
+  - Ghost2
+  - Ghost3
+  - Ghost4
+  - Ghost5
+  - Ghost6
+  - Ghost7
+  - Ball
   layers:
   - Default
   - TransparentFX

@@ -7,14 +7,14 @@ public class Ball : MonoBehaviour {
 	public Rigidbody2D rb;
 	public Rigidbody2D hook;
 
-	private int pegRate = 60;
+	//private int pegRate = 60;
 
 	public GameObject peg;
 
 	public float releaseTime = 0.15f;
 	public float maxDragDistance = 2f;
 
-	private bool stop = false;
+	public bool stop = false;
 
 	private bool isPressed = false;
 
@@ -47,7 +47,7 @@ public class Ball : MonoBehaviour {
 	{
 		isPressed = false;
 		rb.isKinematic = false;
-		StartCoroutine (Release ());
+		StartCoroutine (Release());
 	}
 
 	IEnumerator Release ()
@@ -60,6 +60,7 @@ public class Ball : MonoBehaviour {
 
 	void FixedUpdate()
 	{
+		/*
 		if (pegRate >= 60) 
 		{
 			Instantiate (peg, new Vector3 (Random.Range (-2f, 2f), 6f, 0f), peg.transform.rotation);
@@ -69,5 +70,6 @@ public class Ball : MonoBehaviour {
 		{
 			pegRate += 1;
 		}
+		*/
 	}
 }
