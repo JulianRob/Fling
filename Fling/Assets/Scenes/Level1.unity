@@ -582,6 +582,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newVerticies: []
   lengthOfLineRenderer: 2
+  rope: {fileID: 2100000, guid: 8ea85773acdff4052b4ad8069b63f2c9, type: 2}
+  mousePos: {x: 0, y: 0, z: 0}
 --- !u!212 &248893456
 SpriteRenderer:
   m_ObjectHideFlags: 0

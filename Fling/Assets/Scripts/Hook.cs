@@ -19,9 +19,12 @@ public class Hook : MonoBehaviour
 	float rate2;
 
 	float identical;
+	float identical2;
 
 	private Vector3 start;
 	private Vector3 end;
+
+	public Material rope;
 
 	bool restart = false;
 
@@ -94,6 +97,7 @@ public class Hook : MonoBehaviour
 		if (isPressed == true) 
 		{
 			identical = x;
+			identical2 = y;
 
 			LineRenderer lineRenderer = GetComponent<LineRenderer>();
 			var points = new Vector3[lengthOfLineRenderer];
@@ -151,12 +155,14 @@ public class Hook : MonoBehaviour
 			}
 			points [1] = new Vector3 (x, y, 0);
 			lineRenderer.SetPositions (points);
+			lineRenderer.material = rope;
+			lineRenderer.textureMode = LineTextureMode.Tile;
 			newVerticies.Clear ();
 			newVerticies.Add (new Vector2 (0, 0));
 			newVerticies.Add (new Vector2 (x - rb2d.transform.position.x, y - rb2d.transform.position.y));
 			setPoints ();   
 
-			if (restart == true && x == identical)
+			if (restart == true && (x == identical || y == identical2))
 			{
 				isPressed = false;
 				locked = false;
