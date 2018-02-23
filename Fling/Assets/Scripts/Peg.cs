@@ -42,10 +42,10 @@ public class Peg : MonoBehaviour {
 
 		if (col.gameObject.tag == "Ball") 
 		{
-			ghostNumber = 8;
+			ghostNumber = 3;
 		}
 
-		for(int i = 0; i < 8; i++)
+		for(int i = 0; i < 2; i++)
 		{
 			if (col.gameObject.tag == "Ghost" + i) 
 			{
@@ -54,7 +54,7 @@ public class Peg : MonoBehaviour {
 			}
 		}
 
-		if (ghostNumber <= 7 && col.gameObject.tag == "Ghost" + ghostNumber) 
+		if (ghostNumber <= 1 && col.gameObject.tag == "Ghost" + ghostNumber) 
 		{
 			GameObject.FindGameObjectWithTag ("Ghost" + 0).GetComponent<Rigidbody2D> ().velocity = GameObject.FindGameObjectWithTag ("Ghost" + ghostNumber).GetComponent<Rigidbody2D> ().velocity;
 			GameObject.FindGameObjectWithTag ("Ghost" + 0).GetComponent<Rigidbody2D> ().angularVelocity = GameObject.FindGameObjectWithTag ("Ghost" + ghostNumber).GetComponent<Rigidbody2D> ().angularVelocity;
@@ -62,52 +62,16 @@ public class Peg : MonoBehaviour {
 			GameObject.FindGameObjectWithTag ("Ghost" + 1).GetComponent<Rigidbody2D> ().velocity = GameObject.FindGameObjectWithTag ("Ghost" + ghostNumber).GetComponent<Rigidbody2D> ().velocity;
 			GameObject.FindGameObjectWithTag ("Ghost" + 1).GetComponent<Rigidbody2D> ().angularVelocity = GameObject.FindGameObjectWithTag ("Ghost" + ghostNumber).GetComponent<Rigidbody2D> ().angularVelocity;
 
-			GameObject.FindGameObjectWithTag ("Ghost" + 2).GetComponent<Rigidbody2D> ().velocity = GameObject.FindGameObjectWithTag ("Ghost" + ghostNumber).GetComponent<Rigidbody2D> ().velocity;
-			GameObject.FindGameObjectWithTag ("Ghost" + 2).GetComponent<Rigidbody2D> ().angularVelocity = GameObject.FindGameObjectWithTag ("Ghost" + ghostNumber).GetComponent<Rigidbody2D> ().angularVelocity;
-
-			GameObject.FindGameObjectWithTag ("Ghost" + 3).GetComponent<Rigidbody2D> ().velocity = GameObject.FindGameObjectWithTag ("Ghost" + ghostNumber).GetComponent<Rigidbody2D> ().velocity;
-			GameObject.FindGameObjectWithTag ("Ghost" + 3).GetComponent<Rigidbody2D> ().angularVelocity = GameObject.FindGameObjectWithTag ("Ghost" + ghostNumber).GetComponent<Rigidbody2D> ().angularVelocity;
-
-			GameObject.FindGameObjectWithTag ("Ghost" + 4).GetComponent<Rigidbody2D> ().velocity = GameObject.FindGameObjectWithTag ("Ghost" + ghostNumber).GetComponent<Rigidbody2D> ().velocity;
-			GameObject.FindGameObjectWithTag ("Ghost" + 4).GetComponent<Rigidbody2D> ().angularVelocity = GameObject.FindGameObjectWithTag ("Ghost" + ghostNumber).GetComponent<Rigidbody2D> ().angularVelocity;
-
-			GameObject.FindGameObjectWithTag ("Ghost" + 5).GetComponent<Rigidbody2D> ().velocity = GameObject.FindGameObjectWithTag ("Ghost" + ghostNumber).GetComponent<Rigidbody2D> ().velocity;
-			GameObject.FindGameObjectWithTag ("Ghost" + 5).GetComponent<Rigidbody2D> ().angularVelocity = GameObject.FindGameObjectWithTag ("Ghost" + ghostNumber).GetComponent<Rigidbody2D> ().angularVelocity;
-
-			GameObject.FindGameObjectWithTag ("Ghost" + 6).GetComponent<Rigidbody2D> ().velocity = GameObject.FindGameObjectWithTag ("Ghost" + ghostNumber).GetComponent<Rigidbody2D> ().velocity;
-			GameObject.FindGameObjectWithTag ("Ghost" + 6).GetComponent<Rigidbody2D> ().angularVelocity = GameObject.FindGameObjectWithTag ("Ghost" + ghostNumber).GetComponent<Rigidbody2D> ().angularVelocity;
-
-			GameObject.FindGameObjectWithTag ("Ghost" + 7).GetComponent<Rigidbody2D> ().velocity = GameObject.FindGameObjectWithTag ("Ghost" + ghostNumber).GetComponent<Rigidbody2D> ().velocity;
-			GameObject.FindGameObjectWithTag ("Ghost" + 7).GetComponent<Rigidbody2D> ().angularVelocity = GameObject.FindGameObjectWithTag ("Ghost" + ghostNumber).GetComponent<Rigidbody2D> ().angularVelocity;
-
 			GameObject.Find ("Ball").GetComponent<Rigidbody2D> ().velocity = GameObject.FindGameObjectWithTag ("Ghost" + ghostNumber).GetComponent<Rigidbody2D> ().velocity;
 			GameObject.Find ("Ball").GetComponent<Rigidbody2D> ().angularVelocity = GameObject.FindGameObjectWithTag ("Ghost" + ghostNumber).GetComponent<Rigidbody2D> ().angularVelocity;
 		}
-		else if(ghostNumber == 8)
+		else if(ghostNumber == 3)
 		{
 			GameObject.FindGameObjectWithTag("Ghost" + 0).GetComponent<Rigidbody2D> ().velocity = GameObject.Find ("Ball").GetComponent<Rigidbody2D> ().velocity;
 			GameObject.FindGameObjectWithTag("Ghost" + 0).GetComponent<Rigidbody2D> ().angularVelocity = GameObject.Find ("Ball").GetComponent<Rigidbody2D> ().angularVelocity;
 
 			GameObject.FindGameObjectWithTag("Ghost" + 1).GetComponent<Rigidbody2D> ().velocity = GameObject.Find ("Ball").GetComponent<Rigidbody2D> ().velocity;
 			GameObject.FindGameObjectWithTag("Ghost" + 1).GetComponent<Rigidbody2D> ().angularVelocity = GameObject.Find ("Ball").GetComponent<Rigidbody2D> ().angularVelocity;
-
-			GameObject.FindGameObjectWithTag("Ghost" + 2).GetComponent<Rigidbody2D> ().velocity = GameObject.Find ("Ball").GetComponent<Rigidbody2D> ().velocity;
-			GameObject.FindGameObjectWithTag("Ghost" + 2).GetComponent<Rigidbody2D> ().angularVelocity = GameObject.Find ("Ball").GetComponent<Rigidbody2D> ().angularVelocity;
-
-			GameObject.FindGameObjectWithTag("Ghost" + 3).GetComponent<Rigidbody2D> ().velocity = GameObject.Find ("Ball").GetComponent<Rigidbody2D> ().velocity;
-			GameObject.FindGameObjectWithTag("Ghost" + 3).GetComponent<Rigidbody2D> ().angularVelocity = GameObject.Find ("Ball").GetComponent<Rigidbody2D> ().angularVelocity;
-
-			GameObject.FindGameObjectWithTag("Ghost" + 4).GetComponent<Rigidbody2D> ().velocity = GameObject.Find ("Ball").GetComponent<Rigidbody2D> ().velocity;
-			GameObject.FindGameObjectWithTag("Ghost" + 4).GetComponent<Rigidbody2D> ().angularVelocity = GameObject.Find ("Ball").GetComponent<Rigidbody2D> ().angularVelocity;
-
-			GameObject.FindGameObjectWithTag("Ghost" + 5).GetComponent<Rigidbody2D> ().velocity = GameObject.Find ("Ball").GetComponent<Rigidbody2D> ().velocity;
-			GameObject.FindGameObjectWithTag("Ghost" + 5).GetComponent<Rigidbody2D> ().angularVelocity = GameObject.Find ("Ball").GetComponent<Rigidbody2D> ().angularVelocity;
-
-			GameObject.FindGameObjectWithTag("Ghost" + 6).GetComponent<Rigidbody2D> ().velocity = GameObject.Find ("Ball").GetComponent<Rigidbody2D> ().velocity;
-			GameObject.FindGameObjectWithTag("Ghost" + 6).GetComponent<Rigidbody2D> ().angularVelocity = GameObject.Find ("Ball").GetComponent<Rigidbody2D> ().angularVelocity;
-
-			GameObject.FindGameObjectWithTag("Ghost" + 7).GetComponent<Rigidbody2D> ().velocity = GameObject.Find ("Ball").GetComponent<Rigidbody2D> ().velocity;
-			GameObject.FindGameObjectWithTag("Ghost" + 7).GetComponent<Rigidbody2D> ().angularVelocity = GameObject.Find ("Ball").GetComponent<Rigidbody2D> ().angularVelocity;
 		}
 	}
 }
